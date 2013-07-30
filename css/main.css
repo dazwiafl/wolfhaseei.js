@@ -1,0 +1,464 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Stalinist+One);
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.game{
+    background-color: #657568;
+    background-image: url('../img/spielfeld.png');
+    width: 640px;
+    height: 397px;
+    position: relative;
+}
+
+.fox{
+    background-image: url('../img/spritesheet.png');
+    background-repeat: no-repeat;
+    height: 112px;
+    left: 235px;
+    overflow: hidden;
+    position: absolute;
+    top: 156px;
+    width: 186px;
+}
+
+.fox.left_down{
+    background-position: 0px -78px;
+}
+
+.fox.left_up{
+    background-position: 0px -190px;
+}
+
+.fox.right_down{
+    background-position: 0px -302px;
+}
+
+.fox.right_up{
+    background-position: 0px -414px;
+}
+
+
+
+
+.egg{
+    background-image: url('../img/spritesheet.png');
+    height: 40px;
+    position: absolute;
+    overflow: hidden;
+    width: 92px;
+
+    transform-origin:50% 50%;
+    -ms-transform-origin:50% 50%;
+    -webkit-transform-origin:50% 50%;
+    -o-transform-origin:50% 50%;
+    -moz-transform-origin:50% 50%;
+}
+
+.egg.left_up{
+    left: 174px;
+    top: 156px;
+}
+
+.egg.left_down{
+    left: 174px;
+    top: 200px;
+}
+
+.egg.right_up, .egg.right_down{
+    -webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+
+.egg.right_up{
+    right: 157px;
+    top: 158px;
+}
+
+.egg.right_down{
+    right: 157px;
+    top: 202px;
+}
+
+.egg.fail-left{
+    top: 245px !important;
+}
+
+.egg.fail-right{
+    top: 247px !important;
+}
+
+.egg.pos1{
+    background-position: 0px -38px;
+}
+
+.egg.pos2{
+    background-position: -92px -38px;
+}
+
+.egg.pos3{
+    background-position: -184px -38px;
+}
+
+.egg.pos4{
+    background-position: -276px -38px;
+}
+
+.egg.catched, .egg.dead{
+    display:none;
+}
+
+.egg.pos5{
+    background-position: 0px 0px;
+}
+
+.egg.pos6{
+    background-position: -92px 0px;
+}
+
+.egg.pos7{
+    background-position: -184px 0px;
+}
+
+.egg.pos8{
+    background-position: -276px 0px;
+}
+
+.points{
+    color: #333935;
+    font-family: 'Stalinist One', cursive;
+    font-size: 22px;
+    text-align: center;
+    top: 119px;
+    position: absolute;
+    width: 100%;
+}
+
+.fails{
+    color: #333935;
+    font-family: 'Stalinist One', cursive;
+    font-size: 22px;
+    text-align: center;
+    top: 125px;
+    position: absolute;
+    right: 210px;
+}
+
+.failPoint{
+    width: 20px;
+    height: 19px;
+    float: left;
+    background-image: url(../img/fails/fail1.png);
+    margin-left: 3px;
+}
+
+.rabbit{
+    position: absolute;
+    background-image: url(../img/hase.png);
+    background-repeat: no-repeat;
+    left: 206px;
+    top: 107px;
+    width: 63px;
+    height: 56px;
+}
