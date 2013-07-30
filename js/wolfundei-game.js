@@ -114,6 +114,9 @@ function WolfUndEiGame($el){
 			"gameover": ['sounds/gameover.mp3', 'sounds/gameover.ogg', 'sounds/gameover.wav'] 
 		};
 
+		playaudio("/sounds/"+which+".mp3");
+		return;
+
 		var sound = new Howl({
 		  urls: def[which],
 		  autoplay: true,
