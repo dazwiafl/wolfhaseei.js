@@ -112,20 +112,16 @@ function WolfUndEiGame($el){
 			"catch": ['sounds/catch.mp3', 'sounds/catch.ogg', 'sounds/catch.wav'],
 			"fail": ['sounds/fail.mp3', 'sounds/fail.ogg', 'sounds/fail.wav'],
 			"gameover": ['sounds/gameover.mp3', 'sounds/gameover.ogg', 'sounds/gameover.wav'] 
-		};
+		},
+		src = "sounds/"+which+".mp3";
 
-		playaudio("/sounds/"+which+".mp3");
-		return;
-
-		var sound = new Howl({
-		  urls: def[which],
-		  autoplay: true,
-		  loop: false,
-		  volume: 0.5,
-		  onend: function() {
-		    
-		  }
-		});
+		if (device.platform == 'Android') {
+            src = '/android_asset/www/' + src;
+        }
+ 
+        var media = new Media(src, function(){}, function(){alert("error");});
+ 
+        media.play();
 	};
 	/* SOUNDS END */
 
