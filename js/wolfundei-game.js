@@ -9,7 +9,19 @@ function WolfUndEiGame($el){
 
 
 	/* FOX START */
-	self.__fox_model = new FoxModel();
+	self.__fox_anchorLU = new FoxAnchorView({_class:'anchorLU', _parent:self._$mainView});
+	self.__fox_anchorLD = new FoxAnchorView({_class:'anchorLD', _parent:self._$mainView});
+	self.__fox_anchorRU = new FoxAnchorView({_class:'anchorRU', _parent:self._$mainView});
+	self.__fox_anchorRD = new FoxAnchorView({_class:'anchorRD', _parent:self._$mainView});
+
+	self.__fox_model = new FoxModel({
+		anchors: [
+			self.__fox_anchorRD,
+			self.__fox_anchorRU,
+			self.__fox_anchorLD,
+			self.__fox_anchorLU
+		]
+	});
 	self.__fox_view = new FoxView({
 		model: self.__fox_model
 	});

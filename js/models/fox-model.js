@@ -1,12 +1,25 @@
 FoxModel = Backbone.Model.extend({
     defaults: {
-    	state:"left_up"
+    	state:"left_up",
+    	anchors: []
 	},
 	
 	initialize: function(){
 		var self = this;
 		
 		self._startKeylogger();
+		self._startListening();
+	},
+
+	_startListening: function(){
+		var self = this;
+
+		_.each(self.get("anchors"), function(val, key, list){
+			console.log(arguments);
+			val.bind('clicked', function(data){
+				self._changeState(data.state);
+			});
+		});
 	},
 
 	_startKeylogger: function(){

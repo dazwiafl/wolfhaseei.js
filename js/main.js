@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
-	var app = new WolfUndEiGame($('#container'));
+	setTimeout(function(){
+		var app = new WolfUndEiGame($('#container'));	
+	},50);
+	
 	
 /*	App.View.init();
 

@@ -462,3 +462,30 @@ textarea {
     width: 63px;
     height: 56px;
 }
+
+.fox-anchor{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: red;
+}
+
+.anchorLU{
+    top: 241px;
+    left: 53px;
+}
+
+.anchorLD{
+    left: 54px;
+    bottom: 39px;
+}
+
+.anchorRU{
+    right: 49px;
+    bottom: 107px;
+}
+
+.anchorRD{
+    right: 50px;
+    bottom: 40px;
+}
